@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en" style="font-size: 62.5%;">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <script type="text/javascript" src="assets/js/bootstrap.bundle.min.js"></script>    
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+
+<body>
+
+    <nav class="navbar header">
+        <div class="container">
+            <div class="cart navbar-nav ms-auto">
+                <div class="cart-title">
+                    <span class="fas fa-shopping-cart"></span><span class="cart-text">My Cart</span><span class="qty"></span>
+                </div>
+                <div class="cart-content">
+                    <ul class="cart-listing">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="product-detail">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="product-img">
+                        <img src="assets/img/classic-tee.jpg" />
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="product-title" data-value=1>
+                        <h1>Classic Tee</h1>
+                    </div>
+
+                    <div class="price-box">
+                        <span>$75.00</span>
+                    </div>
+
+                    <div class="product-desc">
+                        <span>dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                            ut
+                            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+                            esse
+                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                            in
+                            culpa qui officia deserunt mollit anim id est laborum.</span>
+                    </div>
+
+                    <div class="product-options">
+                        <div class="option-header">
+                            <span class="option-title">Size</span><span class="option-value"></span>
+                        </div>
+                        <div class="option-wrapper">
+                            <input class="input-size" label="S" value="S" id="S" name="size" type="radio">
+                            <label class="size-options" for="S" data-value="S">
+                                <span>S</span>
+                            </label>
+                            <input class="input-size" label="M" value="M" id="M" name="size" type="radio">
+                            <label class="size-options" for="M" data-value="M">
+                                <label>M</label>
+                            </label>
+                            <input class="input-size" label="L" value="L" id="L" name="size" type="radio">
+                            <label class="size-options" for="L" data-value="L">
+                                <label>L</label>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="product-submit">
+                        <button class="cart-btn" onclick="AddToCart()">
+                            <span class="add-to-cart-text">Add To Cart</span>
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+</body>
+
+<!-- External Javascript code -->
+<script type="text/javascript" src="assets/js/function.js"></script>
+</html>

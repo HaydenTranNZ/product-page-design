@@ -1,0 +1,237 @@
+/* Styles for header */
+
+.navbar.header {
+    background-color: #F6F6F7;
+    margin-top: 15px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+/* Styles the cart block and minicart */
+
+.cart {
+    position: relative;
+    width: 300px;
+    align-items: flex-end;
+}
+
+.cart-title {
+    width: 75px;
+    text-align: center;
+    padding: 7px;
+    z-index: 1;
+    cursor: pointer;
+    border: 1px solid #F6F6F7;
+    color: #888;
+}
+
+.cart-text,
+.fa-shopping-cart,
+.qty {
+    pointer-events: none;
+}
+
+.cart-text {
+    display: none;
+}
+
+.cart-title.active {
+    background: #fff;
+    border-style: solid;
+    border-color: #CCC;
+    border-bottom-color: #fff;
+    color: #222222;
+}
+
+.cart-img img {
+    width: 100%;
+}
+
+.cart-img {
+    width: 30%;
+    display: table-cell;
+}
+
+.cart-product-info {
+    width: 65%;
+    padding-left: 15px;
+    display: table-cell;
+    vertical-align: top;
+}
+
+.cart-product-title,
+.cart-product-quantity,
+.cart-product-size {
+    font-size: 1.5rem;
+    color: #222222;
+    margin-bottom: 10px;
+}
+
+.cart-price {
+    font-weight: 600;
+}
+
+
+.cart-content ul {
+    list-style: none;
+    padding: 20px 20px 0 20px;
+}
+
+.cart-content ul li {
+    margin-bottom: 40px;
+}
+
+.cart-content {
+    width: 100%;
+    max-width: 300px;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: #CCCCCC;
+    background: #ffffff;
+    display: none;
+}
+
+.cart-content.show {
+    display: block;
+}
+
+.cart.has-item:hover .cart-content {
+    display: block;
+}
+
+.cart.has-item:hover .cart-title {
+    background: #ffffff;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: #CCCCCC;
+    border-bottom-color: #ffffff;
+    color: #222222;
+}
+
+/* Styles for Product detail section */
+
+.product-img {
+    max-width: 450px;
+    display: block;
+    margin: 30px auto auto auto;
+}
+
+.product-img img {
+    width: 100%;
+}
+
+.product-detail {
+    padding: 10px;
+}
+
+.product-title {
+    margin-top: 30px;
+}
+
+.product-title h1 {
+    font-size: 2.5rem;
+}
+
+.price-box {
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 1.8rem;
+    border-top: 1px solid #CCC;
+    border-bottom: 1px solid #CCC;
+    padding: 5px 0px;
+}
+
+.product-desc {
+    margin-top: 20px;
+    font-size: 1.8rem;
+    color: #888;
+}
+
+/* Styles for the product size option section */
+
+.option-header {
+    margin-top: 30px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.option-title {
+    color: #888;
+    font-weight: 600;
+}
+
+.option-title:after {
+    content: "*";
+    color: #C90000;
+}
+
+.option-value {
+    color: #222222;
+    margin-left: 10px;
+    font-weight: 600;
+}
+
+.option-wrapper {
+    margin-top: 10px;
+}
+
+.input-size {
+    display: none;
+}
+
+.size-options {
+    border: #CCC 3px solid;
+    display: inline-block;
+    min-width: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #888;
+    margin-right: 3px;
+    font-size: 1.2rem;
+}
+
+.option-wrapper input[type="radio"]:checked+.size-options {
+    color: #222222;
+    border-color: #222222;
+}
+
+/* Styles for the add to cart button */
+
+.cart-btn {
+    margin-top: 20px;
+    text-transform: uppercase;
+    background-color: #ffffff;
+    color: #222222;
+    border: #222222 3px solid;
+    font-size: 1.7rem;
+    font-weight: 600;
+    padding: 5px 20px;
+    transition: 0.2s;
+}
+
+.cart-btn:hover {
+    background-color: #222222;
+    color: #ffffff;
+}
+
+.error-message {
+    color: #C90000;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+@media (min-width: 576px) {
+
+    /* Display my cart text on desktop view and trolley icon on mobile view */
+
+    .fa-shopping-cart {
+        display: none;
+    }
+
+    .cart-text {
+        display: inline-block;
+    }
+}
