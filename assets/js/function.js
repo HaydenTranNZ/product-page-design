@@ -14,13 +14,13 @@ if (document.cookie) {
 
 // If a product size value is selected, display the value next to "Size" text
 
-document.getElementsByClassName('option-wrapper')[0].addEventListener('change', (event) => {
+document.getElementsByClassName('option-wrapper')[0].addEventListener('change', function(event) {
     document.getElementsByClassName('option-value')[0].innerHTML = event.target.value;
 })
 
 // Add a touch event listener (used for mobile view) for the Cart block in the header. The minicart will display when the cart block is touched 
 
-document.addEventListener('touchstart', (event) => {
+document.addEventListener('touchstart', function(event) {
 
     if (event.target == cartElement.firstElementChild) {
         if (cartElement.classList.contains('has-item')) {
