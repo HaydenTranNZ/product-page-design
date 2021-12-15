@@ -49,8 +49,10 @@ function AddToCart() {
         }
     }
 
-    if (SizeValue === null) {
-        document.getElementsByClassName('product-submit')[0].insertAdjacentHTML('beforeend', '<p class="error-message">Please select your size</p>');
+    if ((SizeValue === null)) {
+        if (!document.getElementsByClassName('error-message')[0]) {
+            document.getElementsByClassName('product-submit')[0].insertAdjacentHTML('beforeend', '<p class="error-message">Please select your size</p>');
+        }
         return;
     }
 
