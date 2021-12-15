@@ -8,7 +8,7 @@ var cartContentElement = document.getElementsByClassName('cart-content')[0];
 // Check if the cart already has item based on the cookie and populate the listing inside the cart
 
 if (document.cookie) {
-    cart = JSON.parse(document.cookie);
+    cart = JSON.parse(getCookie('cart'));
     updateCart(cart);
 }
 
@@ -18,9 +18,9 @@ document.getElementsByClassName('option-wrapper')[0].addEventListener('change', 
     document.getElementsByClassName('option-value')[0].innerHTML = event.target.value;
 })
 
-// Add a touch event listener (used for mobile view) for the Cart block in the header. The minicart will display when the cart block is touched 
+// Add a click event listener (used for mobile view) for the Cart block in the header. The minicart will display when the cart block is touched 
 
-document.addEventListener('touchstart', function(event) {
+document.addEventListener('click', function(event) {
 
     if (event.target == cartElement.firstElementChild) {
         if (cartElement.classList.contains('has-item')) {
@@ -61,7 +61,7 @@ function AddToCart() {
     var productvalue = { id: ProductID, size: SizeValue };
     cart.push(productvalue);
 
-    document.cookie = JSON.stringify(cart);
+    document.cookie = 'cart=' + JSON.stringify(cart) + ';';
     location.reload();
 }
 
@@ -96,4 +96,19 @@ function updateCart(cartvalue) {
         }
     }, Object.create(null));
 
+}
+
+function getCookie(c_name) {
+    if (document.cookie.length > 0) {
+        c_start = document.cookie.indexOf(c_name + "=");
+        if (c_start != -1) {
+            c_start = c_start + c_name.length + 1;
+            c_end = document.cookie.indexOf(";", c_start);
+            if (c_end == -1) {
+                c_end = document.cookie.length;
+            }
+            return unescape(document.cookie.substring(c_start, c_end));
+        }
+    }
+    return "";
 }
