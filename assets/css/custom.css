@@ -11,7 +11,6 @@
 
 .cart {
     position: relative;
-    width: 300px;
     align-items: flex-end;
 }
 
@@ -27,7 +26,7 @@
 
 .cart-text,
 .fa-shopping-cart,
-.qty {
+.qty, .cart-listing {
     pointer-events: none;
 }
 
@@ -71,7 +70,6 @@
     font-weight: 600;
 }
 
-
 .cart-content ul {
     list-style: none;
     padding: 20px 20px 0 20px;
@@ -96,10 +94,12 @@
 
 .cart-content.show {
     display: block;
+    width: 300px;
 }
 
 .cart.has-item:hover .cart-content {
     display: block;
+    width: 300px;
 }
 
 .cart.has-item:hover .cart-title {

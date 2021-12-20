@@ -14,27 +14,26 @@ if (document.cookie) {
 
 // If a product size value is selected, display the value next to "Size" text
 
-document.getElementsByClassName('option-wrapper')[0].addEventListener('change', function(event) {
+document.getElementsByClassName('option-wrapper')[0].addEventListener('change', function (event) {
     document.getElementsByClassName('option-value')[0].innerHTML = event.target.value;
 })
 
+// Use matchMedia to detect whether the viewport width is <=768px (matching iPad or mobile)
+if (window.matchMedia('(max-width: 768px)').matches){
 // Add a click event listener (used for mobile view) for the Cart block in the header. The minicart will display when the cart block is touched 
-
-document.addEventListener('click', function(event) {
-
+document.addEventListener('click', function (event) {
     if (event.target == cartElement.firstElementChild) {
         if (cartElement.classList.contains('has-item')) {
-            cartElement.firstElementChild.classList.add('active');
-            cartContentElement.classList.add('show');
+            cartElement.firstElementChild.classList.toggle('active');
+            cartContentElement.classList.toggle('show');
         }
     }
+    if ((event.target != cartElement.firstElementChild) && (event.target != cartContentElement)) {
 
-    else {
         cartElement.firstElementChild.classList.remove('active');
         cartContentElement.classList.remove('show');
     }
-
-});
+})};
 
 // Add the product with selected Size value to the cart array, update the cart array value in the cookie
 
